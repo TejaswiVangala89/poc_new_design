@@ -3,9 +3,16 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 
+export const LabelValue = styled(Typography)(({ theme }) => ({
+  alignSelf: 'center',
+  textAlign: 'left',
+  fontSize: '0.9rem',
+  padding: '0.25rem 0 0.25rem 0',
+}))
+
 export const LabelCell = styled(Typography)(({ theme }) => ({
   alignSelf: 'center',
-  fontWeight: 500,
+  fontWeight: 700,
   textAlign: 'left',
 }));
 
