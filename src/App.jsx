@@ -1,38 +1,23 @@
-import React, { useState } from 'react';
 import './App.css';
-import AccountInfo from './components/AccountInfo';
-import AddressInfo from './components/AddressInfo';
-import ContactBillingInfo from './components/ContactBillingInfo';
-import DistributionReference from "./components/DistributionReference"
-import { Stack, Box, Card } from '@mui/material';
+import CreateOrUpdateCustomer from "./components/CreateOrUpdateCustomer";
+import Home from "./components/Home";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+
+function CustomerWrapper() {
+  const { id } = useParams();
+  return <CreateOrUpdateCustomer id={id} />;
+}
 
 function App() {
-  const [isEditmode, setIsEditmode] = useState(false);
-
   return (
-    <>
-      <button onClick={() => setIsEditmode((prev) => !prev)} style={{ marginBottom: 16 }}>
-        {isEditmode ? 'Readonly' : 'Edit'}
-      </button>
-      <Stack spacing={2} direction={"column"}>
-        <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }} alignItems="stretch" sx={{ width: '100%' }}>
-          <Card variant="outlined" sx={{ boxShadow: 1, flex: 0.35, display: 'flex', flexDirection: 'column' }}>
-            <AccountInfo isEditmode={isEditmode} />
-          </Card>
-          <Card variant="outlined" sx={{ boxShadow: 1, flex: 0.65, display: 'flex', flexDirection: 'column' }}>
-            <ContactBillingInfo isEditmode={isEditmode} />
-          </Card>
-        </Stack>
-        <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }} alignItems="stretch" sx={{ width: '100%' }}>
-          <Card variant="outlined" sx={{ boxShadow: 1, flex: 0.35, display: 'flex', flexDirection: 'column' }}>
-            <AddressInfo isEditmode={isEditmode} />
-          </Card>
-          <Card variant="outlined" sx={{ boxShadow: 1, flex: 0.65, display: 'flex', flexDirection: 'column' }}>
-            <DistributionReference isEditmode={isEditmode} />
-          </Card>
-        </Stack>
-      </Stack>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/customer" element={<CreateOrUpdateCustomer />} />
+        <Route path="/customer/:id" element={<CustomerWrapper />} />
+      </Routes>
+    </Router>
   );
 }
 

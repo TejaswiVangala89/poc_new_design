@@ -1,0 +1,64 @@
+[
+  {
+    "id": "CB00010043",
+    "customerName": "Nextlink Communications",
+    "shortName": "Nextlink",
+    "statementName": "Nextlink Corp",
+    "customerContactName": "David Kim",
+    "customerContactEmail": "david.kim@nextlinkc.com",
+    "territoryId": "T1",
+    "escalationContactName": "",
+    "escalationContactEmail": "",
+    "accountPayableName": "",
+    "accountPayableEmail": "",
+    "classID": "MSC",
+    "customerParentId": "",
+    "subclassCode": "TC",
+    "paymentTerms": "Net 30",
+    "status": "Active",
+    "all_phones": ["+1 709 5555-1234"],
+    "all_emails": ["david.kim@nextlinkc.com"],
+    "addressDetails": [
+      {
+        "attention": "",
+        "addressLine1": "82658 Lowe Cliffs",
+        "addressLine2": "",
+        "city": "Dallas",
+        "postalCode": "75001",
+        "state": "TX",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "id": "CB00010057",
+    "customerName": "NEXTRAQ",
+    "shortName": "NEXTRAQ",
+    "statementName": "NEXTRAQ",
+    "customerContactName": "James Lin",
+    "customerContactEmail": "james.lin@nextraq.com",
+    "territoryId": "T2",
+    "escalationContactName": "",
+    "escalationContactEmail": "",
+    "accountPayableName": "",
+    "accountPayableEmail": "",
+    "classID": "MSC",
+    "customerParentId": "",
+    "subclassCode": "TC",
+    "paymentTerms": "Net 45",
+    "status": "Active",
+    "all_phones": ["+1 469 -723-1569"],
+    "all_emails": ["james.lin@nextraq.com"],
+    "addressDetails": [
+      {
+        "attention": "",
+        "addressLine1": "123 Main St",
+        "addressLine2": "",
+        "city": "Irving",
+        "postalCode": "75038",
+        "state": "TX",
+        "country": "USA"
+      }
+    ]
+  }
+]

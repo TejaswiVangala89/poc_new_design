@@ -7,10 +7,12 @@ import {
   Radio,
   Box
 } from '@mui/material';
-import { LabelCell, InputCell, SelectCell, LabelValue } from './styled';
+import { LabelCell, InputCell, SelectCell, LabelValue } from '../styled';
 import CardWithHeader from "./CardWithHeader";
 
-export default function DistributionReference({ isEditmode = false }) {
+
+export default function DistributionReference({ isEditmode = false, data = {}, onChange }) {
+  // Use data from props or fallback to default
   const [rows, setRows] = React.useState([
     {
       type: 'Cash',
@@ -35,17 +37,23 @@ export default function DistributionReference({ isEditmode = false }) {
     },
   ]);
 
+  // If you want to sync with parent, you can useEffect to emit changes
+  React.useEffect(() => {
+    if (onChange) onChange({ distributionRows: rows });
+    // eslint-disable-next-line
+  }, [rows]);
+
   return (
     <CardWithHeader subtitle="Distribution Reference" sx={{ height: '100%' }}>
       <Box sx={{ px: 1, py: 2 }}>
         <Box sx={{ border: '1px solid #ccc', borderRadius: 2 }}>
-          <Box sx={{ display: 'grid', gridTemplateColumns: '160px 1fr 1fr', background: '#f8f8f8', fontWeight: 700, p: 1 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: '15% 1fr 25%', background: '#f8f8f8', fontWeight: 700, p: 1 }}>
             <LabelCell>Type</LabelCell>
             <LabelCell>Distribution Reference</LabelCell>
             <LabelCell>Description</LabelCell>
           </Box>
           {rows.map((row, idx) => (
-            <Box key={row.type} sx={{ display: 'grid', gridTemplateColumns: '160px 1fr 1fr', alignItems: 'center', borderTop: '1px solid #eee', p: 1 }}>
+            <Box key={row.type} sx={{ display: 'grid', gridTemplateColumns: '15% 1fr 25%', alignItems: 'center', borderTop: '1px solid #eee', p: 1 }}>
               <LabelValue>{row.type}</LabelValue>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <LabelValue>{row.distRefPrefix}</LabelValue>
