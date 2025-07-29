@@ -90,9 +90,9 @@ export default function AccountInfo({ isEditmode = false, data = {}, onChange })
                   width: '100%',
                 }}
               >
-                <FormControlLabel value="Active" control={<Radio color="primary" sx={{ transform: 'scale(0.85)' }} />} label="Active" disabled={!isEditmode} sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 70 } }} />
-                <FormControlLabel value="In-active" control={<Radio color="primary" sx={{ transform: 'scale(0.85)' }} />} label="In-active" disabled={!isEditmode} sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 90 } }} />
-                <FormControlLabel value="Hold" control={<Radio color="primary" sx={{ transform: 'scale(0.85)' }} />} label="Hold" disabled={!isEditmode} sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 60 } }} />
+                <FormControlLabel value="Active" control={<Radio color="primary" sx={{ transform: 'scale(0.7)' }} />} label="Active" disabled={!isEditmode} sx={{ '& .MuiFormControlLabel-label': { fontSize: '12px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 70 } }} />
+                <FormControlLabel value="In-active" control={<Radio color="primary" sx={{ transform: 'scale(0.7)' }} />} label="In-active" disabled={!isEditmode} sx={{ '& .MuiFormControlLabel-label': { fontSize: '12px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 90 } }} />
+                <FormControlLabel value="Hold" control={<Radio color="primary" sx={{ transform: 'scale(0.7)' }} />} label="Hold" disabled={!isEditmode} sx={{ '& .MuiFormControlLabel-label': { fontSize: '12px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 60 } }} />
               </RadioGroup>
             </Box>
           ) : (

@@ -15,7 +15,7 @@ const CardWithHeader = ({ subtitle, children, headerButton }) => {
         title={
           <Box display="flex" alignItems="center" width="100%">
             <Box flex={1} display="flex" alignItems="center">
-              <Typography variant="subtitle1" fontWeight={600} align="left" sx={{ textAlign: 'left', width: '100%' }}>{subtitle}</Typography>
+              <Typography variant="subtitle1" fontWeight={600} align="left" sx={{ textAlign: 'left', width: '100%', fontSize: "14px" }}>{subtitle}</Typography>
             </Box>
             {headerButton && (
               <Box ml={2} display="flex" alignItems="center" justifyContent="flex-end">

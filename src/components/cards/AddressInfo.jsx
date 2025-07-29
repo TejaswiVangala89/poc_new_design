@@ -23,7 +23,7 @@ export default function AddressInfo({ isEditmode = false, addressDetails = [{}],
   return (
     <CardWithHeader subtitle="Address Info" sx={{ height: '100%' }}>
       <Box component="form" autoComplete="off" sx={{ px: 1 }}>
-        <Box sx={{ display: 'grid', gridTemplateColumns: '140px 1fr', columnGap: 2, rowGap: 1 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: '140px 1fr', columnGap: 2 }}>
           <LabelCell>Address ID:</LabelCell>
           {isEditmode ? (
             <InputCell size="small" value={address.addressId || ''} onChange={e => handleFieldChange('addressId', e.target.value)} variant="outlined" margin="dense" />

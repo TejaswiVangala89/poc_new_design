@@ -143,7 +143,7 @@ export default function ContactBillingInfo({ isEditmode = false, onContactsChang
       ) : null}
     >
       <Box component="form" autoComplete="off" sx={{ px: 1 }}>
-        <Box sx={{ display: 'grid', gridTemplateColumns: '180px 1fr 180px 1fr', columnGap: 2, rowGap: 1 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: '180px 1fr 180px 1fr', columnGap: 2 }}>
           {/* All Emails as chips */}
 
           <LabelCell>Contact Name:</LabelCell>

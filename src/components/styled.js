@@ -7,7 +7,7 @@ import { Button } from '@mui/material';
 export const LabelValue = styled(Typography)(({ theme }) => ({
   alignSelf: 'center',
   textAlign: 'left',
-  fontSize: '0.9rem',
+  fontSize: '12px',
   padding: '0.25rem 0 0.25rem 0',
 }))
 
@@ -15,22 +15,26 @@ export const LabelCell = styled(Typography)(({ theme }) => ({
   alignSelf: 'center',
   fontWeight: 700,
   textAlign: 'left',
+  fontSize: '12px',
 }));
 
 export const InputCell = styled(TextField)(({ theme, width }) => ({
   width: width?width:'95%',
-  '& .MuiInputBase-input': { fontSize: '0.95rem' },
+  margin: "0.25rem 0 0.25rem 0",
+  '& .MuiInputBase-input': { fontSize: '12px' }
 }));
 
 export const SelectCell = styled(FormControl)(({ theme, width }) => ({
   width: width?width:'95%',
-  '& .MuiSelect-select': { fontSize: '0.95rem' },
+  fontSize: '12px',
+  margin: "0.25rem 0 0.25rem 0",
+  '& .MuiSelect-select': { fontSize: '12px', padding: "6px 14px" },
   textAlign: 'left'
 }));
 
 export const StyledButton = styled(Button)(({ theme }) => ({
-  padding: '6px 16px',
-  fontSize: '0.8rem',
+  padding: "1px 5px 1px 5px",
+  fontSize: '12px',
   borderRadius: 4,
   background: '#222',
   border: '1px solid #ccc',
@@ -42,8 +46,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
 }))
 
 export const CancelButton = styled(Button)(({ theme }) => ({
-  padding: '6px 16px',
-  fontSize: '0.8rem',
+  padding: '1px 5px 1px 5px',
+  fontSize: '12px',
   borderRadius: 4,
   border: '1px solid #ccc',
   background: '#fff',
