@@ -9,6 +9,9 @@ export const LabelValue = styled(Typography)(({ theme }) => ({
   textAlign: 'left',
   fontSize: '12px',
   padding: '0.25rem 0 0.25rem 0',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 }))
 
 export const LabelCell = styled(Typography)(({ theme }) => ({
